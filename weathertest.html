@@ -15,6 +15,13 @@
 			console.log(new Date().getTimezoneOffset() / -60);
 			console.log(Date());
 			
+/*
+console.log(new Date().toTimeString().slice(9));
+console.log(Intl.DateTimeFormat().resolvedOptions().timeZone);
+console.log(new Date().getTimezoneOffset() / -60);
+console.log(Date());
+*/
+			
 			var time1 = new Date().toTimeString().slice(9);
 			var time2 = Intl.DateTimeFormat().resolvedOptions().timeZone;
 			var time3 = new Date().getTimezoneOffset() / -60;
