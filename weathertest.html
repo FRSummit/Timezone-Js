@@ -1,0 +1,31 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="output">Time zone</div>
+        <div id="output2"></div>
+        <div id="output3"></div>
+        <div id="output4"></div>
+        <div id="output5"></div>
+		<script>
+			console.log(new Date().toTimeString().slice(9));
+			console.log(Intl.DateTimeFormat().resolvedOptions().timeZone);
+			console.log(new Date().getTimezoneOffset() / -60);
+			console.log(Date());
+			
+			var time1 = new Date().toTimeString().slice(9);
+			var time2 = Intl.DateTimeFormat().resolvedOptions().timeZone;
+			var time3 = new Date().getTimezoneOffset() / -60;
+			
+			$(document).ready(function(){
+				$('#output2').text(time1);
+				$('#output3').text(time2);
+				$('#output4').text(time3);
+				$('#output5').text(Date());
+				//document.getElementById('output').innerText = 'Here';
+			});
+		</script>
+    </body>
+<html>
